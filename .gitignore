@@ -1,0 +1,42 @@
+#########################################
+# OSX Section
+#########################################
+.DS_Store
+profile
+
+#########################################
+# SVN
+#########################################
+.svn
+CVS
+
+#########################################
+# XCode 3
+#########################################
+*.pbxuser
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.xcclassmodel/
+*.pyc
+
+########################################
+# XCode 4
+########################################
+*.build/
+build/*
+DerivedData/*
+
+*.[oa]
+*.swp
+*~.nib
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+*.moved-aside

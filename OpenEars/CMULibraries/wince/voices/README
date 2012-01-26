@@ -1,0 +1,40 @@
+
+This contains four flite voices compiled for Windows Mobile using the
+mingw32ce compiler.  These voices are somewhat specially created in
+order for them to be both small and fast to run.
+
+libcmu_us_kal.a
+  This is just the standard kal_diphone 8KHz voice as distributed with
+  flite, its in this directory to make it easier to link in the multiple
+  voice case
+
+libcmu_us_awb.a
+libcmu_us_rms.a
+libcmu_us_slt.a
+  These are 8KHz versions of the standard arctic cg voices, they also have
+  reduced orders to 13 (from 25) thus are quite a bit smaller.  They are
+  almost fast enough for a 400MHz strongarm (AT&T Tilt).
+
+  These were made in a somewhat hacky way.  The orginal arctic waveform files
+  were resampled to 8KHz, then relabeled to be 16KHz (as if the speaker spoke
+  like a chipmunk), then the voice was built.  This means the mceps are actually
+  every 10ms rather than every 5mz but no part of the code actually know that
+  until the very last point.  When the waveform is passed back from cst_mlsa
+  the sample rate is crudely re-labeled to be 8KHz.
+
+To link these into flowm, edit the Makefile to uncomment the lines
+
+# OR you can try these specially built voices for WM
+# Special 8KH, reduced order (13) voices, seem to be fast enough
+# for 400MHz ARM (Tytn II)
+#voice_LIBS_flags = -Lvoices -lcmu_us_kal -lcmu_us_awb -lcmu_us_rms -lcmu_us_slt
+#EXTRA_CC_FLAGS = -Dcmu_us_kal -Dcmu_us_awb -Dcmu_us_rms -Dcmu_us_slt
+
+The source of these files is also included, you'll have to update the
+Makefile's to make them point at compiled version of flite.  These
+voices are probably a good idea for the iPhone.
+
+
+
+
+  

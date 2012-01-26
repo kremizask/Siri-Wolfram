@@ -1,0 +1,35 @@
+Contents of /Users/kostaskremizas/Desktop/Demo2/OpenEars/OpenEarsLibrary/OpenEarsLibrary_Prefix.pch
+3.0 (tags/Apple/clang-211.9) (based on LLVM 3.0svn)
+arm-apple-darwin11.2.0
+-x
+objective-c
+-arch
+armv7
+-fmessage-length=0
+-fdiagnostics-print-source-range-info
+-fdiagnostics-show-category=id
+-fdiagnostics-parseable-fixits
+-std=c99
+-fpascal-strings
+-O0
+-isysroot
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk
+-gdwarf-2
+-DIBOutlet=__attribute__((iboutlet))
+-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))
+-DIBAction=void)__attribute__((ibaction)
+-miphoneos-version-min=5.0
+-iquote
+-iquote
+-I/Users/kostaskremizas/Desktop/Demo2/OpenEars/OpenEarsSampleProject/DerivedData/OpenEarsSampleProject/Build/Products/Debug-iphoneos/include
+-I../mitlm.0.4/src
+-IClasses/include
+-I../CMULibraries/flite-1.4-release/include
+-I../CMULibraries/sphinxbase-0.6.1/include
+-I../CMULibraries/pocketsphinx-0.6.1/include
+-F/Users/kostaskremizas/Desktop/Demo2/OpenEars/OpenEarsSampleProject/DerivedData/OpenEarsSampleProject/Build/Products/Debug-iphoneos
+-ferror-limit=10
+-working-directory=/Users/kostaskremizas/Desktop/Demo2/OpenEars/OpenEarsLibrary
+-Xclang
+-detailed-preprocessing-record
+SDK_PRODUCT_BUILD_VERSION=9A334

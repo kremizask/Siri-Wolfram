@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>searches</key>
+	<array>
+		<string>Are we there yet?</string>
+		<string>Where is Waldo ?</string>
+		<string>pi</string>
+		<string>Open the pod bay doors, HAL</string>
+		<string>What do women want ?</string>
+		<string>How do I win the lottery ?</string>
+		<string>To be or not to be</string>
+		<string>What’s the speed of an unladen swallow?</string>
+		<string>Answer to the Ultimate Question of Life, the Universe, and Everything</string>
+		<string>who is luke&apos;s father?</string>
+	</array>
+</dict>
+</plist>
