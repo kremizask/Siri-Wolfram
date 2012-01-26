@@ -86,6 +86,10 @@
 #pragma mark - Action methods
 
 - (IBAction)backBtnPressed:(id)sender {
+    [recordButton setSelected:NO];
+    listeningLoopRunning=NO;
+    [self.pocketsphinxController stopListening];
+    [self hideLoadingIndicators];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -143,8 +147,8 @@
                           initWithTitle:@""
                           message:[NSString stringWithFormat:@"Search for \"%@\"",hypothesis]
                           delegate:self 
-                          cancelButtonTitle:NSLocalizedString(@"OK", @"Request failure alert OK.") 
-                          otherButtonTitles:@"NO", nil];
+                          cancelButtonTitle:@"NO" 
+                          otherButtonTitles:@"OK", nil];
     [alert show];
     [alert release];
 }
@@ -153,6 +157,7 @@
 - (void) audioSessionInterruptionDidBegin {
 	NSLog(@"AudioSession interruption began."); // Log it.
 	[self.pocketsphinxController stopListening]; // React to it by telling Pocketsphinx to stop listening since it will need to restart its loop after an interruption.
+    [self hideLoadingIndicators];
 }
 
 // An optional delegate method of OpenEarsEventsObserver which informs that the interruption to the audio session ended.
@@ -301,7 +306,7 @@
 #pragma mark - UIAlertView delegate method
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (buttonIndex==0) {
+    if (buttonIndex==1) {
         [self.pocketsphinxController stopListening];
        [recordButton setSelected:NO];
         listeningLoopRunning=NO;

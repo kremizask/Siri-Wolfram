@@ -1,0 +1,28 @@
+Summary
+===============
+
+This is a simple iPhone application that uses the WolframAlpha API to display answers to the users queries.
+There are three different ways to make a query. Users can either:
+
+1. Type the entry they want to search for
+2. use voice detection to provide their search term or
+3. Choose among some predefined searches.
+
+External Libraries
+===============
+The external libraries used by this app are:
+
+* [OpenEars](http://www.politepix.com/openears) for voice recognition.
+* [TouchXML](https://github.com/TouchCode/TouchXML), for the parsing of the WolframAlpha API XML response
+* [ASIHTTPRequest](http://allseeing-i.com/ASIHTTPRequest/) for the HTTP requests.
+
+For a more information on these libraries and on how to install use them and use them in your project visit the corresponding websites.
+
+Specifically for OpenEars, in addition to the instructions described in the it's [website](http://www.politepix.com/openears) in order to make it work in this project I set the Header Search Paths both on project settings and the target settings.
+
+Usage Notes
+===============
+* Even though the voice recognition module can run on the Simulator as well as on the device, it is optimized for the device. 
+* What should be also noted is that the quality of the voice recognition is dependent on the dictionary used. In this demo I am using For the .languagemodel file from the install (note: files that end with .DMP are fine to use as ARPA language model files): [OPENEARS]/CMULibraries/pocketsphinx-0.6.1/model/lm/en_US/hub4.5000.DMP
+For the .dic I used [this](https://cmusphinx.svn.sourceforge.net/svnroot/cmusphinx/trunk/pocketsphinx/model/lm/en_US/hub4.5000.dic) file from the Pocketsphinx repository. As stated on the OpenEars documentation "This will set you up with a matching 5000 word vocabulary for the default acoustic model which you can then tell PocketsphinxController to start with. To the best of my understanding, 5000 words is the maximum size for decent recognition performance for Pocketsphinx and reasonable resource usage on the device. Keep in mind that using such a large model will increase your memory overhead, and reduce recognition speed and recognition accuracy."
+As a result, quite a few of the voice searches I tried failed to be correctly recognized. Some search terms that worked for me in the "voice" mode are the following: "what is the population of China", "what is my name", "what time is it", "ice". 

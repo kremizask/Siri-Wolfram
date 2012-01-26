@@ -33,7 +33,7 @@
 
 #import "OpenEarsVoiceConfig.h"
 
-#define OPENEARSLOGGING // Turn this on to get logging output from audio driver initialization, etc. Please turn on and submit output when reporting a problem.
+//#define OPENEARSLOGGING // Turn this on to get logging output from audio driver initialization, etc. Please turn on and submit output when reporting a problem.
 //#define VERBOSEPOCKETSPHINX // Leave this uncommented to get verbose output from Pocketsphinx, comment it out for quiet operation. I'd recommend starting with it uncommented and then commenting when you're pretty sure things are working.
 //#define VERBOSEMITLM // Leave this uncommented to get more output from language model generation
 //#define USERCANINTERRUPTSPEECH // Turn this on if you wish to let users cut off Flite speech by talking (only possible when headphones are plugged in). Not sure if this is 100% functional in v 0.913
